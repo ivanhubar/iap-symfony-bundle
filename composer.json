@@ -1,0 +1,39 @@
+{
+  "name": "ivanhubar/iap-symfony-bundle",
+  "description": "A Symfony Bundle for simple integration of Payment subscription by ApplePay and GooglePlay Billing",
+  "type": "symfony-bundle",
+  "keywords": [
+    "in-app-purchases",
+    "google_play",
+    "app_store",
+    "apple",
+    "google",
+    "in_app_purchases",
+    "symfony",
+    "symfony-in-app-purchases",
+    "subscriptions"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ivan Hubar",
+      "email": "freevan04@gmail.com"
+    }
+  ],
+  "version": "1.0.0",
+  "require": {
+    "php": ">=8.2",
+    "symfony/framework-bundle": "*",
+    "guzzlehttp/guzzle": "^7.8",
+    "jms/serializer": "^3.28",
+    "firebase/php-jwt": "^6.8",
+    "ext-openssl": "*",
+    "ramsey/uuid": "^4.7",
+    "google/auth": "^1.30"
+  },
+  "autoload": {
+    "psr-4": {
+      "IvanHubar\\HubarIAPBundle\\": "src"
+    }
+  }
+}

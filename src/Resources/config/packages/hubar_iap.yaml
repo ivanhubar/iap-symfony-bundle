@@ -1,0 +1,9 @@
+hubar_iap:
+  apple_password: 'fill_here'
+  path_to_apple_root_certificate: 'fill_here'
+  apple_private_key_id: 'fill_here'
+  apple_issuer_id: 'fill_here'
+  apple_bundle_id: 'fill_here'
+  apple_private_key: 'fill_here'
+  google_credentials_path: 'fill_here'
+  google_package_name: 'fill_here'

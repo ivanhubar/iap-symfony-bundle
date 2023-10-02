@@ -1,0 +1,65 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  ivanhubar.iap_symfony.modules.apple_pay.service.apple_pay_service:
+    class: IvanHubar\HubarIAPBundle\Modules\ApplePay\Service\ApplePayService
+    public: true
+
+  ivanhubar.iap_symfony.modules.google_play.service.google_play_service:
+    class: IvanHubar\HubarIAPBundle\Modules\GooglePlay\Service\GooglePlayService
+    public: true
+
+  ivanhubar.iap_symfony.modules.apple_pay.service.server_notification_processor:
+    class: IvanHubar\HubarIAPBundle\Modules\ApplePay\Service\ServerNotification\ServerNotificationProcessor
+    public: true
+
+  ivanhubar.iap_symfony.modules.apple_pay.service.rtdn.rtdn_subscription_service:
+    class: IvanHubar\HubarIAPBundle\Modules\GooglePlay\Service\RTDN\RTDNSubscriptionService
+    public: true
+
+  ivanhubar.iap_symfony.modules.apple_pay.service.verify_receipt.verify_receipt_service:
+    class: IvanHubar\HubarIAPBundle\Modules\ApplePay\Service\VerifyReceipt\VerifyReceiptService
+    public: true
+
+  ivanhubar.iap_symfony.modules.google_play.service.subscriptions_v2.subscriptions_v2_service:
+    class: IvanHubar\HubarIAPBundle\Modules\GooglePlay\Service\SubscriptionsV2\SubscriptionsV2Service
+    public: true
+
+  ivanhubar.iap_symfony.modules.google_play.service.subscription_acknowledge.subscription_acknowledge_service:
+    class: IvanHubar\HubarIAPBundle\Modules\GooglePlay\Service\SubscriptionAcknowledge\SubscriptionAcknowledgeService
+    public: true
+
+  ivanhubar.iap_symfony.modules.apple_pay.dto_builder.server_notification.server_notification_dto_builder:
+    class: IvanHubar\HubarIAPBundle\Modules\ApplePay\DtoBuilder\ServerNotification\ServerNotificationDtoBuilder
+    public: true
+
+  ivanhubar.iap_symfony.modules.apple_pay.dto_builder.verify_receipt.success_response_dto_builder:
+    class: IvanHubar\HubarIAPBundle\Modules\ApplePay\DtoBuilder\VerifyReceipt\SuccessResponseDtoBuilder
+    public: true
+
+  ivanhubar.iap_symfony.modules.google_play.factory.client_factory:
+    class: IvanHubar\HubarIAPBundle\Modules\GooglePlay\Factory\ClientFactory
+    public: true
+
+  ivanhubar.iap_symfony.modules.apple_pay.factory.client_factory:
+    class: IvanHubar\HubarIAPBundle\Modules\ApplePay\Factory\ClientFactory
+    public: true
+
+  IvanHubar\HubarIAPBundle\Modules\ApplePay\Service\ApplePayService: '@ivanhubar.iap_symfony.modules.apple_pay.service.apple_pay_service'
+  IvanHubar\HubarIAPBundle\Modules\ApplePay\Service\ApplePayServiceInterface: '@ivanhubar.iap_symfony.modules.apple_pay.service.apple_pay_service'
+  IvanHubar\HubarIAPBundle\Modules\GooglePlay\Service\GooglePlayService: '@ivanhubar.iap_symfony.modules.google_play.service.google_play_service'
+  IvanHubar\HubarIAPBundle\Modules\GooglePlay\Service\GooglePlayServiceInterface: '@ivanhubar.iap_symfony.modules.google_play.service.google_play_service'
+  IvanHubar\HubarIAPBundle\Modules\ApplePay\Service\ServerNotification\ServerNotificationProcessor: '@ivanhubar.iap_symfony.modules.apple_pay.service.server_notification_processor'
+  IvanHubar\HubarIAPBundle\Modules\ApplePay\Service\ServerNotification\ServerNotificationProcessorInterface: '@ivanhubar.iap_symfony.modules.apple_pay.service.server_notification_processor'
+  IvanHubar\HubarIAPBundle\Modules\GooglePlay\Service\RTDN\RTDNSubscriptionService: '@ivanhubar.iap_symfony.modules.apple_pay.service.rtdn.rtdn_subscription_service'
+  IvanHubar\HubarIAPBundle\Modules\GooglePlay\Service\RTDN\RTDNSubscriptionServiceInterface: '@ivanhubar.iap_symfony.modules.apple_pay.service.rtdn.rtdn_subscription_service'
+  IvanHubar\HubarIAPBundle\Modules\ApplePay\Service\VerifyReceipt\VerifyReceiptService: '@ivanhubar.iap_symfony.modules.apple_pay.service.verify_receipt.verify_receipt_service'
+  IvanHubar\HubarIAPBundle\Modules\GooglePlay\Service\SubscriptionsV2\SubscriptionsV2Service: '@ivanhubar.iap_symfony.modules.google_play.service.subscriptions_v2.subscriptions_v2_service'
+  IvanHubar\HubarIAPBundle\Modules\GooglePlay\Service\SubscriptionAcknowledge\SubscriptionAcknowledgeService: '@ivanhubar.iap_symfony.modules.google_play.service.subscription_acknowledge.subscription_acknowledge_service'
+  IvanHubar\HubarIAPBundle\Modules\ApplePay\DtoBuilder\ServerNotification\ServerNotificationDtoBuilder: '@ivanhubar.iap_symfony.modules.apple_pay.dto_builder.server_notification.server_notification_dto_builder'
+  IvanHubar\HubarIAPBundle\Modules\ApplePay\DtoBuilder\VerifyReceipt\SuccessResponseDtoBuilder: '@ivanhubar.iap_symfony.modules.apple_pay.dto_builder.verify_receipt.success_response_dto_builder'
+  IvanHubar\HubarIAPBundle\Modules\GooglePlay\Factory\ClientFactory: '@ivanhubar.iap_symfony.modules.google_play.factory.client_factory'
+  IvanHubar\HubarIAPBundle\Modules\ApplePay\Factory\ClientFactory: '@ivanhubar.iap_symfony.modules.apple_pay.factory.client_factory'
